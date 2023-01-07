@@ -5,11 +5,11 @@
 class Pylai < Formula
   desc "Simple cli totp manager and authenticator"
   homepage "https://github.com/arlomcwalter/pylai"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
-    url "https://github.com/arlomcwalter/pylai/releases/download/v1.0.1/pylai_1.0.1_darwin_all.tar.gz"
-    sha256 "768135763ffab885362535697fc43c2fe61f78404e6a370031627a140703d139"
+    url "https://github.com/arlomcwalter/pylai/releases/download/v1.0.2/pylai_1.0.2_darwin_all.tar.gz"
+    sha256 "1761ff92372c23684c862d705699e2aeefd9629fde86e86bc17179fee41187fb"
 
     def install
       bin.install "pylai"
@@ -17,17 +17,17 @@ class Pylai < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arlomcwalter/pylai/releases/download/v1.0.1/pylai_1.0.1_linux_arm64.tar.gz"
-      sha256 "295c01ce32ed29a3cba4a91f7ffb37d1f4b0efeffa91a21d8e0ba009f3f04663"
+    if Hardware::CPU.intel?
+      url "https://github.com/arlomcwalter/pylai/releases/download/v1.0.2/pylai_1.0.2_linux_amd64.tar.gz"
+      sha256 "b5b88f7f11e54c25b3ccc5ebb3e92572b12e78c514ae66d97f2edf1bf26a2b36"
 
       def install
         bin.install "pylai"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arlomcwalter/pylai/releases/download/v1.0.1/pylai_1.0.1_linux_amd64.tar.gz"
-      sha256 "5694d9e6d4a149a287a76c05456799b0422f5c9e3673e5108516bca05982003d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arlomcwalter/pylai/releases/download/v1.0.2/pylai_1.0.2_linux_arm64.tar.gz"
+      sha256 "d48f9a66fccbbe8a37bc589692c7766509cf5c20df6661aa39e14533fbdf3ba2"
 
       def install
         bin.install "pylai"
