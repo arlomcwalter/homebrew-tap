@@ -5,11 +5,11 @@
 class BjCli < Formula
   desc "A simple CLI blackjack game written in Go"
   homepage "https://github.com/arlomcwalter/bj-cli"
-  version "1.0.2"
+  version "1.0.3"
 
   on_macos do
-    url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.2/bj-cli_1.0.2_darwin_all.tar.gz"
-    sha256 "8c24a57d3fc356c0fd4b8164e66ace94842bc7dce53703c65124e4c0b415ab11"
+    url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.3/bj-cli_1.0.3_darwin_all.tar.gz"
+    sha256 "9990462d131db41655d3df6fb75cdc7761b183c099c81f184a197561e0f008d0"
 
     def install
       bin.install "bj-cli"
@@ -18,16 +18,16 @@ class BjCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.2/bj-cli_1.0.2_linux_arm64.tar.gz"
-      sha256 "f5eb2062dab68b3a84ed9b65b3ea1eb722b4165c27a6123d7e8f6e6a3116fd0a"
+      url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.3/bj-cli_1.0.3_linux_arm64.tar.gz"
+      sha256 "a1800e3fa8a66e2b4cb83b6e5e368d405b94119e39e9b0825cbec04b974f5981"
 
       def install
         bin.install "blackjack"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.2/bj-cli_1.0.2_linux_amd64.tar.gz"
-      sha256 "b3ce00a899a960d0f302f85953a981d6d4aeedc638a511b75fb86d67d91c6a3a"
+      url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.3/bj-cli_1.0.3_linux_amd64.tar.gz"
+      sha256 "651ccd68d9fc8cb36b392ceeb647f352d88a19874c19ac739832e7e72d30ae0c"
 
       def install
         bin.install "blackjack"
