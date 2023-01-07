@@ -9,7 +9,7 @@ class BjCli < Formula
 
   on_macos do
     url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.3/bj-cli_1.0.3_darwin_all.tar.gz"
-    sha256 "9990462d131db41655d3df6fb75cdc7761b183c099c81f184a197561e0f008d0"
+    sha256 "a5480198b3b3f1266e5700fcfc1afc0c664d7b2f82f74db89bae9c45b301afa4"
 
     def install
       bin.install "bj-cli"
@@ -19,18 +19,18 @@ class BjCli < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.3/bj-cli_1.0.3_linux_arm64.tar.gz"
-      sha256 "a1800e3fa8a66e2b4cb83b6e5e368d405b94119e39e9b0825cbec04b974f5981"
+      sha256 "530e7c3c79eb3dc7a060157007bcf62a4ce4aaa5d7603c3994b4f25fafde12da"
 
       def install
-        bin.install "blackjack"
+        bin.install "bj-cli"
       end
     end
     if Hardware::CPU.intel?
       url "https://github.com/arlomcwalter/bj-cli/releases/download/v1.0.3/bj-cli_1.0.3_linux_amd64.tar.gz"
-      sha256 "651ccd68d9fc8cb36b392ceeb647f352d88a19874c19ac739832e7e72d30ae0c"
+      sha256 "21c136215dbec8d4a081c839198254cffa82a2b9c1d63562163f9dc9f2c9c81d"
 
       def install
-        bin.install "blackjack"
+        bin.install "bj-cli"
       end
     end
   end
